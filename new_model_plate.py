@@ -253,7 +253,7 @@ model.load_weights("plate.h5")
 lr_reduce = LearningRateScheduler(scheduler,verbose = 1)
 model.fit_generator(datagen.flow(train_x, train_y,batch_size=64),
                          epochs = 10,
-                         steps_per_epoch=n*4//64,
+                         steps_per_epoch=n//64,
                          callbacks=[lr_reduce,mcp_save],
                          validation_data=(val_x, val_y))   
 
