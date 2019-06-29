@@ -6,48 +6,23 @@ Created on Thu Jun 27 15:00:42 2019
 @author: tuanna118
 """
 
-from random import shuffle
+
 from keras.preprocessing.image import *
 from keras.layers.core import *
 import tensorflow as tf
-
 from keras.layers import *
 from keras.models import *
-from keras.preprocessing import image
-from keras.utils import layer_utils
-from keras.utils.data_utils import get_file
-from keras.applications.imagenet_utils import preprocess_input
-import pydot
-
-from sklearn.model_selection import train_test_split
 import keras
-import argparse
 import numpy as np
-from keras.datasets import cifar10, cifar100,mnist
-
 from keras import backend as K
 import pandas as pd
 from keras.callbacks import *
 np.random.seed(0)
-
-import glob
-from keras import backend as K
-import cv2
-import h5py
 import matplotlib.pyplot as plt
 from keras.utils.np_utils import to_categorical   
-
 from keras.regularizers import l2
-
-
-
-import pickle, gzip
-from scipy import misc
-import numpy as np
-import string
-import numpy as np
-import pandas as pd
 import cv2
+
 letters = " ABCDEFGHIJKLMNPQRSTUVWXYZ0123456789"
 dic = {}
 for i in range(len(letters)):
